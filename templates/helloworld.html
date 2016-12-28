@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>helloworld</title>
+    <style>
+        body {
+            padding: 0;
+            background-color: aliceblue;
+            margin: auto;
+            height: 300px;
+        }
+
+        h1, img {
+            text-align: center;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 70px;
+            border-color: #d2d0d5;
+            border-style: outset;
+            border-width: 4px;
+        }
+
+        #head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+            background-color: #00c4ff;
+        }
+
+        #connectInfo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        span {
+            flex: 1;
+            font-family: Arial;
+            color: floralwhite;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #myName {
+            font-family: "Microsoft YaHei UI";
+            color: floralwhite;
+            font-size: 25px;
+            margin: 10px;
+        }
+
+        #menu {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        #menu div {
+            flex: 1;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div id="head">
+    <img src="./res/98.jpg"/>
+    <p id="myName">
+        冯可可
+    </p>
+    <div id="connectInfo">
+        <span style="text-align: right">18615959513 | fengke9411@gmail.com</span>
+    </div>
+</div>
+
+<form action="/testdb" method="get">
+    <input type="text" name="username"/>
+    <input type="text" name="password"/>
+    <input type="submit" value="submit"/>
+</form>
+<br/>
+<form action="/postTest/" method="post">
+    {% csrf_token %}
+    <input type="text" name="username"/>
+    <input type="text" name="password"/>
+    <input type="submit" value="submit"/>
+</form>
+<p>{{ rlt }}</p>
+
+<hr/>
+<div id="menu">
+    <div>
+    </div>
+    <div>
+    </div>
+    <div>首页</div>
+    <div>文章</div>
+    <div>博客</div>
+    <div>关于</div>
+    <div>
+    </div>
+    <div>
+    </div>
+</div>
+<h1>欢迎光临iuway,请问您想知道什么</h1>
+
+</body>
+</html>
